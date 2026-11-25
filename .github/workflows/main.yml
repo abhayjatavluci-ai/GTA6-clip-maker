@@ -1,4 +1,3 @@
-       
 name: Build GTA 6 Android APK
 
 on:
@@ -22,7 +21,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: Install Android SDK
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
@@ -45,4 +44,3 @@ jobs:
         with:
           name: GTA6-Clip-Maker-APK
           path: source/GTA6_Clip_Maker_Android/app/build/outputs/apk/debug/*.apk
-          
